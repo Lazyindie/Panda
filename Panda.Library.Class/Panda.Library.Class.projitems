@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>99617cfa-cfdc-475b-852c-10f5bd0bcc4e</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Panda.Library.Class</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)appointment\AddAppointmentDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)appointment\AppointmentDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)appointment\EditAppointmentDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)clinician\ClinicianDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\CorsProfiles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)patient\AddPatientDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)patient\EditPatient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)patient\PatientDto.cs" />
+    <Compile Include="..\Panda.Library.Class\Clinician\AddClinicianDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)common\AppointmentStatus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Appointment\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Patient\" />
+  </ItemGroup>
+</Project>
