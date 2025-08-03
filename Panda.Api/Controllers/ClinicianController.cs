@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Panda.Library.Class.Clinician;
 using Panda.Services.Members.Clinicians.AddClinician;
+using Panda.Services.Members.Clinicians.GetClinicians;
 
 namespace Panda.Api.Controllers;
 
@@ -10,10 +11,12 @@ namespace Panda.Api.Controllers;
 public class ClinicianController : ControllerBase
 {
     private readonly IAddClinicianService _addClinicionService;
+    private readonly IGetCliniciansService _getCliniciansService;
 
-    public ClinicianController(IAddClinicianService addClinicionService)
+    public ClinicianController(IAddClinicianService addClinicionService, IGetCliniciansService getCliniciansService)
     {
         _addClinicionService = addClinicionService;
+        _getCliniciansService = getCliniciansService;
     }
 
     /// <summary>
@@ -27,5 +30,12 @@ public class ClinicianController : ControllerBase
     {
         var ClinitionId = await _addClinicionService.AddClinicianAsync(request, cancellationToken).ConfigureAwait(false);
         return TypedResults.Ok(ClinitionId);
+    }
+
+    [HttpGet]
+    public async Task<Results<BadRequest, UnauthorizedHttpResult, Ok<IEnumerable<ClinicianDto>>>> GetClinicians(CancellationToken cancellationToken)
+    {
+        var clinicians = await _getCliniciansService.GetCliniciansAsync(cancellationToken).ConfigureAwait(false);
+        return TypedResults.Ok(clinicians);
     }
 }

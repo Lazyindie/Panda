@@ -1,6 +1,6 @@
 using Panda.Domain.Common;
 
-namespace Panda.Domain;
+namespace Panda.Domain; 
 
 public class Department : Auditable
 {

@@ -1,6 +1,7 @@
 ﻿using Panda.Services.Appointments.AddAppointment;
 using Panda.Services.Appointments.GetAppointment;
 using Panda.Services.Appointments.UpdateAppointmentStatus;
+using Panda.Services.Department.AddDepartment;
 using Panda.Services.Members.Clinicians.AddClinician;
 using Panda.Services.Members.Clinicians.GetClinicians;
 using Panda.Services.Members.Patients.AddPatient;
@@ -67,6 +68,9 @@ public static class ServiceConfiguration
             // Clinician Services
             .AddScoped<IAddClinicianService, AddClinicianService>()
             .AddScoped<IGetCliniciansService, GetCliniciansService>()
+
+            // Department Services
+            .AddScoped<IAddDepartmentService, AddDepartmentService>()
         ;
     }
 }

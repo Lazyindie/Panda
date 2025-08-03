@@ -14,6 +14,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)appointment\EditAppointmentDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)clinician\ClinicianDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\CorsProfiles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)department\AddDepartmentDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)patient\AddPatientDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)patient\EditPatient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)patient\PatientDto.cs" />
@@ -21,7 +22,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)common\AppointmentStatus.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Appointment\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Patient\" />
+    <Folder Include="$(MSBuildThisFileDirectory)appointment\" />
+    <Folder Include="$(MSBuildThisFileDirectory)patient\" />
   </ItemGroup>
 </Project>

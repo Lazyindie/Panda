@@ -13,9 +13,9 @@ public class AppointmentController : ControllerBase
     private readonly IAddAppointmentService _addClinitionService;
     private readonly IEditAppointmentService _updateAppointmentService;
 
-    public AppointmentController(IAddAppointmentService addClinitionService, IEditAppointmentService updateAppointmentService)
+    public AppointmentController(IAddAppointmentService addAppointmentService, IEditAppointmentService updateAppointmentService)
     {
-        _addClinitionService = addClinitionService;
+        _addClinitionService = addAppointmentService;
         _updateAppointmentService = updateAppointmentService;
     }
 
